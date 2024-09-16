@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<heedad>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="title">Customer Satisfaction Survey</h1>
+        <p id="description">We would love to hear your thoughts about our product. Please take a moment to complete this survey.</p>
+    </header>
+
+    <main>
+        <form id="survey-form">
+
+            <!-- Name input -->
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <!-- Email input -->
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Age input -->
+            <label for="number" id="number-label">Age</label>
+            <input type="number" id="number" name="age" min="18" max="100" placeholder="Enter your age" required>
+
+            <!-- Dropdown input -->
+            <label for="dropdown">Which product did you purchase?</label>
+            <select id="dropdown" name="product" required>
+                <option value="" disabled selected>Select a product</option>
+                <option value="product1">Product 1</option>
+                <option value="product2">Product 2</option>
+            </select>
+
+            <!-- Radio buttons -->
+            <label>How would you rate our product?</label>
+            <div class="radio-group">
+                <input type="radio" id="excellent" name="rating" value="excellent" required>
+                <label for="excellent">Excellent</label>
+                <input type="radio" id="good" name="rating" value="good" required>
+                <label for="good">Good</label>
+                <input type="radio" id="average" name="rating" value="average" required>
+                <label for="average">Average</label>
+            </div>
+
+            <!-- Checkbox group -->
+            <label>What aspects of the product are important to you?</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="quality" name="features" value="quality">
+                <label for="quality">Quality</label>
+                <input type="checkbox" id="price" name="features" value="price">
+                <label for="price">Price</label>
+                <input type="checkbox" id="design" name="features" value="design">
+                <label for="design">Design</label>
+            </div>
+
+            <!-- Textarea for additional comments -->
+            <label for="comments">Any additional comments:</label>
+            <textarea id="comments" name="comments" placeholder="Enter your comments here..."></textarea>
+
+            <!-- Submit button -->
+            <button type="submit" id="submit">Submit</button>
+
+        </form>
+    </main>
+
+</body>
+</html>
